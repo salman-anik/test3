@@ -32,6 +32,7 @@ nav{
     align-items: center;
     position: fixed;
     background-color: white;
+    z-index: 2;
 }
 nav p{
     font-size: 1.1rem;
@@ -42,13 +43,18 @@ nav button{
     border: 1px solid black;
     padding: 10px;
 }
+nav button:hover{
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+}
 .One{
     width: 100vw;
     height: 100vh;
-    /* background-image: url(assets/Hero-bg.png); */
+    background-image: url(assets/Hero-bg.png),linear-gradient(rgba(33, 33, 33, 0.434), rgba(0, 0, 0, 0.082));
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+    background-position: center;
     display: grid;
     place-items: center;
 }
@@ -70,6 +76,9 @@ nav button{
     width: 200px;
     margin: 10px auto;
     border-radius: 5px;
+}
+.One main a:hover{
+    background-color: rgb(20, 16, 82);
 }
 .Two{
     text-align: center;
@@ -98,6 +107,11 @@ nav button{
                     text-align: center;
                     border: 1px solid black;
                 }
+                a:hover{
+                    background-color: black;
+                    color: white;
+                    transition: 0.5s;
+                }
             }
             div:nth-child(1){
                  max-width: 40%;
@@ -105,6 +119,10 @@ nav button{
         }
         >div:nth-child(2){
            flex-direction: row-reverse;
+        }
+        >div:hover img{
+            scale: 1.15;
+            transition: 1s;
         }
     }
 }
@@ -154,6 +172,10 @@ nav button{
         >div:nth-child(3){
             background-color: rgb(241, 239, 222);
         }
+        >div:hover img{
+            scale: 1.13;
+            transition: 1s;
+        }
     }
 }
 .Five{
@@ -188,6 +210,10 @@ nav button{
                     font-weight: bold;
                 }
             }
+        }
+        .box:hover{
+            background-color: rgb(225, 235, 245);
+            transition: 0.3s;
         }
     }
 }
@@ -233,6 +259,7 @@ footer{
     width: 100vw;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 10px;
     background-color: whitesmoke;
     div{
@@ -254,6 +281,9 @@ footer{
        a:nth-child(2){
         color: white;
         background-color: rgb(22, 135, 180);
+       }
+       a:hover{
+         background-color: black;
        }
     }
 }
